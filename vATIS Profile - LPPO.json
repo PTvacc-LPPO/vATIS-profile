@@ -2012,7 +2012,7 @@
           "name": "D-ATIS RWY 30",
           "airportConditions": "",
           "notams": "",
-          "template": "LPPD ARR ATIS [ATIS_CODE]\r\n[TIME] EXP ILS Z APCH OR RNP Y APCH\r\nRWY IN USE 30\r\n[TL]\r\n[NOTAMS]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
+          "template": "LPPD ARR ATIS [ATIS_CODE]\r\n[TIME] EXP ILS Z APCH OR RNP Y APCH\r\nRWY IN USE 30\r\n[TL]\r\n[ARPT_COND]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
           "externalGenerator": {
             "enabled": false,
             "textUrl": "https://atis.vatsim.pt/?metar=LPPD&rwy=12&letter=$atiscode&show_freqs=true",
@@ -2029,7 +2029,7 @@
           "name": "D-ATIS RWY 12",
           "airportConditions": "TESTING",
           "notams": "THIS IS A TEST",
-          "template": "LPPD ARR ATIS [ATIS_CODE]\r\n[TIME] EXP RNP W APCH OR RNP Y APCH\r\nRWY IN USE 12\r\n[TL]\r\n[NOTAMS]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
+          "template": "LPPD ARR ATIS [ATIS_CODE]\r\n[TIME] EXP RNP W APCH OR RNP Y APCH\r\nRWY IN USE 12\r\n[TL]\r\n[ARPT_COND]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
           "externalGenerator": {
             "enabled": false,
             "textUrl": "",
@@ -2074,12 +2074,11 @@
         }
       ],
       "contractions": [],
-      "airportConditionDefinitions": [],
-      "notamDefinitions": [
+      "airportConditionDefinitions": [
         {
           "text": "FIRST CONTACT ON TWR FREQ 118.3",
-          "ordinal": 0,
-          "enabled": false
+          "ordinal": 1,
+          "enabled": true
         },
         {
           "text": "TWR FREQ CL ON THE GND CONTACT 119.4",
@@ -2089,9 +2088,10 @@
         {
           "text": "TWR FREQ CL ON THE GND CONTACT 132.150",
           "ordinal": 3,
-          "enabled": true
+          "enabled": false
         }
-      ]
+      ],
+      "notamDefinitions": []
     },
     {
       "id": "06e164da-62e7-4463-8524-3cf1c51101cf",
@@ -4103,7 +4103,7 @@
           "name": "D-ATIS RWY 33",
           "airportConditions": "",
           "notams": "",
-          "template": "LPLA ARR ATIS [ATIS_CODE]\r\n[TIME] EXP ILS APCH\r\nRWY IN USE 33\r\n[TL]\r\n[NOTAMS]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
+          "template": "LPLA ARR ATIS [ATIS_CODE]\r\n[TIME] EXP ILS APCH\r\nRWY IN USE 33\r\n[TL]\r\n[ARPT_COND]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
           "externalGenerator": {
             "enabled": false,
             "textUrl": "",
@@ -4120,7 +4120,7 @@
           "name": "D-ATIS RWY 15",
           "airportConditions": "TESTING",
           "notams": "THIS IS A TEST",
-          "template": "LPLA ARR ATIS [ATIS_CODE]\r\n[TIME] EXP ILS APCH\r\nRWY IN USE 15\r\n[TL]\r\n[NOTAMS]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
+          "template": "LPLA ARR ATIS [ATIS_CODE]\r\n[TIME] EXP ILS APCH\r\nRWY IN USE 15\r\n[TL]\r\n[ARPT_COND]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
           "externalGenerator": {
             "enabled": false,
             "textUrl": "",
@@ -4165,10 +4165,9 @@
         }
       ],
       "contractions": [],
-      "airportConditionDefinitions": [],
-      "notamDefinitions": [
+      "airportConditionDefinitions": [
         {
-          "text": "ON THE GND CONTACT 134.1",
+          "text": "FIRST CONTACT ON DEL FREQ 134.1",
           "ordinal": 1,
           "enabled": false
         },
@@ -4180,19 +4179,20 @@
         {
           "text": "GND FREQ CL ON THE GND CONTACT 122.1",
           "ordinal": 3,
-          "enabled": false
+          "enabled": true
         },
         {
           "text": "TWR FREQ CL ON THE GND CONTACT 135.0",
-          "ordinal": 4,
+          "ordinal": 3,
           "enabled": false
         },
         {
           "text": "TWR FREQ CL ON THE GND CONTACT 132.150",
           "ordinal": 5,
-          "enabled": true
+          "enabled": false
         }
-      ]
+      ],
+      "notamDefinitions": []
     },
     {
       "id": "8bb21d88-dc27-4176-b271-f76774e463e6",
@@ -6204,7 +6204,7 @@
           "name": "D-ATIS RWY 28",
           "airportConditions": "",
           "notams": "",
-          "template": "LPHR ARR ATIS [ATIS_CODE]\r\n[TIME] EXP HT LCTR A\r\nRWY IN USE 28\r\n[TL]\r\n[NOTAMS]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
+          "template": "LPHR ARR ATIS [ATIS_CODE]\r\n[TIME] EXP HT LCTR A\r\nRWY IN USE 28\r\n[TL]\r\n[ARPT_COND]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
           "externalGenerator": {
             "enabled": false,
             "textUrl": "",
@@ -6221,7 +6221,7 @@
           "name": "D-ATIS RWY 10",
           "airportConditions": "",
           "notams": "",
-          "template": "LPHR ARR ATIS [ATIS_CODE]\r\n[TIME] EXP HT LCTR A\r\nRWY IN USE 10\r\n[TL]\r\n[NOTAMS]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
+          "template": "LPHR ARR ATIS [ATIS_CODE]\r\n[TIME] EXP HT LCTR A\r\nRWY IN USE 10\r\n[TL]\r\n[ARPT_COND]\r\nWND TDZ [WIND]\r\n[VIS]\r\nCLD [CLOUDS]\r\nT [TEMP] DP [DEW] QNH [PRESSURE]\r\n",
           "externalGenerator": {
             "enabled": false,
             "textUrl": "https://atis.vatsim.pt/?metar=LPPD&rwy=12&letter=$atiscode&show_freqs=true",
@@ -6266,24 +6266,24 @@
         }
       ],
       "contractions": [],
-      "airportConditionDefinitions": [],
-      "notamDefinitions": [
+      "airportConditionDefinitions": [
         {
-          "text": "FIRST CONTACT ON TWR FREQ 118.3",
-          "ordinal": 0,
-          "enabled": false
+          "text": "FIRST CONTACT ON TWR FREQ 118.0",
+          "ordinal": 1,
+          "enabled": true
         },
         {
-          "text": "TWR FREQ CL ON THE GND CONTACT 119.4",
+          "text": "TWR FREQ CL ON THE GND CONTACT 120.6",
           "ordinal": 2,
           "enabled": false
         },
         {
           "text": "TWR FREQ CL ON THE GND CONTACT 132.150",
           "ordinal": 3,
-          "enabled": true
+          "enabled": false
         }
-      ]
+      ],
+      "notamDefinitions": []
     }
   ],
   "version": 4
